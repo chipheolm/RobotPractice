@@ -6,7 +6,6 @@ Library      RequestsLibrary
 Library      JSONLibrary
 Library      REST
 Library      SeleniumLibrary    
-Library      AppiumLibrary
 
 Variables    ./env.yaml
 Variables    ./test_data.yaml

@@ -1,5 +1,5 @@
 *** Setting ***
 Resource    ${CURDIR}/../web_import.robot
-Resource    ${CURDIR}/../locator/checkout_page.robot
+Resource    ${CURDIR}/../locator/searching_page.robot
 
 ***Keyword***
