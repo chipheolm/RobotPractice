@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ${CURDIR}/../../resources/imports.robot
+Resource    ${CURDIR}/../../resources/imports_resources.robot
 
 *** Keywords ***
 

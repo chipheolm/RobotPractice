@@ -1,0 +1,1393 @@
+{
+  "data": {
+    "productSearch": {
+      "total_count": 109,
+      "sorting": [
+        {
+          "code": "name",
+          "name": "Product Name"
+        },
+        {
+          "code": "brand",
+          "name": "แบรนด์"
+        },
+        {
+          "code": "m_memory_ram",
+          "name": "หน่วยความจำ (RAM)"
+        },
+        {
+          "code": "m_memory_rom_gb",
+          "name": "หน่วยความจำ ROM (GB)"
+        }
+      ],
+      "filters": [
+        {
+          "name": "ประเภทสินค้า",
+          "attribute_code": "category_id",
+          "position": -1,
+          "items": [
+            {
+              "label": "Default Category",
+              "value": "2",
+              "count": 108,
+              "custom_attributes": {
+                "parent_id": 1,
+                "url_path": null,
+                "level": 1,
+                "url_key": "defaultcategory"
+              }
+            },
+            {
+              "label": "ทีวี",
+              "value": "125476",
+              "count": 106,
+              "custom_attributes": {
+                "parent_id": 125470,
+                "url_path": "tv-and-entertainment/televisions",
+                "level": 3,
+                "url_key": "televisions"
+              }
+            },
+            {
+              "label": "ทีวี / บันเทิง",
+              "value": "125470",
+              "count": 106,
+              "custom_attributes": {
+                "parent_id": 2,
+                "url_path": "tv-and-entertainment",
+                "level": 2,
+                "url_key": "tv-and-entertainment"
+              }
+            },
+            {
+              "label": "LED & Nano Cell & QLED",
+              "value": "125479",
+              "count": 86,
+              "custom_attributes": {
+                "parent_id": 125476,
+                "url_path": "tv-and-entertainment/televisions/led-tvs",
+                "level": 4,
+                "url_key": "led-tvs"
+              }
+            },
+            {
+              "label": "ทีวี 4K",
+              "value": "125482",
+              "count": 70,
+              "custom_attributes": {
+                "parent_id": 125476,
+                "url_path": "tv-and-entertainment/televisions/4k-uhd-tvs",
+                "level": 4,
+                "url_key": "4k-uhd-tvs"
+              }
+            },
+            {
+              "label": "New You New Home Hilight",
+              "value": "134864",
+              "count": 9,
+              "custom_attributes": {
+                "parent_id": 129866,
+                "url_path": "promotion/big-campaign/new-you-new-home-hilight",
+                "level": 4,
+                "url_key": "new-you-new-home-hilight"
+              }
+            },
+            {
+              "label": "OLED",
+              "value": "125485",
+              "count": 9,
+              "custom_attributes": {
+                "parent_id": 125476,
+                "url_path": "tv-and-entertainment/televisions/oled-qled-tvs",
+                "level": 4,
+                "url_key": "oled-qled-tvs"
+              }
+            },
+            {
+              "label": "hi light new year resolution voucher set 2",
+              "value": "131715",
+              "count": 2,
+              "custom_attributes": {
+                "parent_id": 129866,
+                "url_path": "promotion/big-campaign/hi-light-new-year-resolution-voucher-set-2",
+                "level": 4,
+                "url_key": "hi-light-new-year-resolution-voucher-set-2"
+              }
+            },
+            {
+              "label": "คอมพิวเตอร์ / ออฟฟิศ",
+              "value": "127084",
+              "count": 1,
+              "custom_attributes": {
+                "parent_id": 2,
+                "url_path": "computers-and-offices",
+                "level": 2,
+                "url_key": "computers-and-offices"
+              }
+            },
+            {
+              "label": "คีย์บอร์ด",
+              "value": "127537",
+              "count": 1,
+              "custom_attributes": {
+                "parent_id": 127525,
+                "url_path": "all-accessories/computer-and-gaming-accessories/keyboards",
+                "level": 4,
+                "url_key": "keyboards"
+              }
+            },
+            {
+              "label": "อุปกรณ์เสริม",
+              "value": "127486",
+              "count": 1,
+              "custom_attributes": {
+                "parent_id": 2,
+                "url_path": "all-accessories",
+                "level": 2,
+                "url_key": "all-accessories"
+              }
+            },
+            {
+              "label": "อุปกรณ์เสริมคอมพิวเตอร์ และเกมส์มิ่ง",
+              "value": "127525",
+              "count": 1,
+              "custom_attributes": {
+                "parent_id": 127486,
+                "url_path": "all-accessories/computer-and-gaming-accessories",
+                "level": 3,
+                "url_key": "computer-and-gaming-accessories"
+              }
+            }
+          ]
+        },
+        {
+          "name": "แบรนด์",
+          "attribute_code": "brand",
+          "position": 400,
+          "items": [
+            {
+              "label": "SAMSUNG",
+              "value": "SAMSUNG",
+              "count": 19,
+              "custom_attributes": null
+            },
+            {
+              "label": "LG",
+              "value": "LG",
+              "count": 18,
+              "custom_attributes": null
+            },
+            {
+              "label": "SONY",
+              "value": "SONY",
+              "count": 18,
+              "custom_attributes": null
+            },
+            {
+              "label": "TCL",
+              "value": "TCL",
+              "count": 12,
+              "custom_attributes": null
+            },
+            {
+              "label": "PANASONIC",
+              "value": "PANASONIC",
+              "count": 6,
+              "custom_attributes": null
+            },
+            {
+              "label": "PHILIPS",
+              "value": "PHILIPS",
+              "count": 6,
+              "custom_attributes": null
+            },
+            {
+              "label": "SHARP",
+              "value": "SHARP",
+              "count": 6,
+              "custom_attributes": null
+            },
+            {
+              "label": "SKYWORTH",
+              "value": "SKYWORTH",
+              "count": 6,
+              "custom_attributes": null
+            },
+            {
+              "label": "ACONATIC",
+              "value": "ACONATIC",
+              "count": 5,
+              "custom_attributes": null
+            },
+            {
+              "label": "HISENSE",
+              "value": "HISENSE",
+              "count": 5,
+              "custom_attributes": null
+            },
+            {
+              "label": "PRISMA",
+              "value": "PRISMA",
+              "count": 4,
+              "custom_attributes": null
+            },
+            {
+              "label": "HYUNDAI",
+              "value": "HYUNDAI",
+              "count": 2,
+              "custom_attributes": null
+            },
+            {
+              "label": "NANO",
+              "value": "NANO",
+              "count": 2,
+              "custom_attributes": null
+            }
+          ]
+        },
+        {
+          "name": "ช่วงความจุ (cubic)",
+          "attribute_code": "m_capacity_cubic",
+          "position": 400,
+          "items": [
+            {
+              "label": "0 - 6 คิว",
+              "value": "0 - 6 คิว",
+              "count": 1,
+              "custom_attributes": null
+            }
+          ]
+        },
+        {
+          "name": "สี",
+          "attribute_code": "m_color",
+          "position": 400,
+          "items": [
+            {
+              "label": "Black",
+              "value": "Black",
+              "count": 2,
+              "custom_attributes": null
+            }
+          ]
+        },
+        {
+          "name": "ระบบละลายน้ำแข็ง",
+          "attribute_code": "m_defrosting",
+          "position": 400,
+          "items": [
+            {
+              "label": "Automatic Defrosting",
+              "value": "Automatic Defrosting",
+              "count": 1,
+              "custom_attributes": null
+            }
+          ]
+        },
+        {
+          "name": "ช่วงขนาดหน้าจอ (นิ้ว)",
+          "attribute_code": "m_screen_size_group_inches",
+          "position": 400,
+          "items": [
+            {
+              "label": "44 - 55 นิ้ว",
+              "value": "44 - 55 นิ้ว",
+              "count": 109,
+              "custom_attributes": null
+            },
+            {
+              "label": "32 - 43 นิ้ว",
+              "value": "32 - 43 นิ้ว",
+              "count": 85,
+              "custom_attributes": null
+            },
+            {
+              "label": "56 - 65 นิ้ว",
+              "value": "56 - 65 นิ้ว",
+              "count": 57,
+              "custom_attributes": null
+            },
+            {
+              "label": "66 - 100  นิ้ว",
+              "value": "66 - 100  นิ้ว",
+              "count": 40,
+              "custom_attributes": null
+            },
+            {
+              "label": "14 - 31 นิ้ว",
+              "value": "14 - 31 นิ้ว",
+              "count": 10,
+              "custom_attributes": null
+            }
+          ]
+        },
+        {
+          "name": "เทคโนโลยีจอภาพ",
+          "attribute_code": "m_screen_technology",
+          "position": 400,
+          "items": [
+            {
+              "label": "4K",
+              "value": "4K",
+              "count": 99,
+              "custom_attributes": null
+            },
+            {
+              "label": "Others",
+              "value": "Others",
+              "count": 9,
+              "custom_attributes": null
+            },
+            {
+              "label": "NanoCell",
+              "value": "NanoCell",
+              "count": 1,
+              "custom_attributes": null
+            }
+          ]
+        },
+        {
+          "name": "เทคโนโลยีการเชื่อมต่อ",
+          "attribute_code": "m_smart_tv_yn",
+          "position": 400,
+          "items": [
+            {
+              "label": "Smart",
+              "value": "Smart",
+              "count": 60,
+              "custom_attributes": null
+            },
+            {
+              "label": "Android",
+              "value": "Android",
+              "count": 46,
+              "custom_attributes": null
+            },
+            {
+              "label": "Non-Smart",
+              "value": "Non-Smart",
+              "count": 3,
+              "custom_attributes": null
+            }
+          ]
+        },
+        {
+          "name": "ไร้สาย",
+          "attribute_code": "m_wireless",
+          "position": 400,
+          "items": [
+            {
+              "label": "ไม่ใช่ / ไม่มี",
+              "value": "ไม่ใช่ / ไม่มี",
+              "count": 1,
+              "custom_attributes": null
+            }
+          ]
+        },
+        {
+          "name": "Seller",
+          "attribute_code": "marketplace_seller",
+          "position": 400,
+          "items": [
+            {
+              "label": "Topvalue Official",
+              "value": "2799",
+              "count": 1,
+              "custom_attributes": null
+            }
+          ]
+        },
+        {
+          "name": "บริการ",
+          "attribute_code": "shipping_methods",
+          "position": 400,
+          "items": [
+            {
+              "label": "Home Delivery",
+              "value": "pwb_hdl",
+              "count": 88,
+              "custom_attributes": null
+            },
+            {
+              "label": "รับที่ร้านใน 1 ชม",
+              "value": "storepickup_ispu",
+              "count": 88,
+              "custom_attributes": null
+            },
+            {
+              "label": "Store Pickup - Click & Collect",
+              "value": "storepickup_sts",
+              "count": 1,
+              "custom_attributes": null
+            }
+          ]
+        },
+        {
+          "name": "Product Rating Counter - five",
+          "attribute_code": "star_rating_five",
+          "position": 400,
+          "items": [
+            {
+              "label": "star_rating_five",
+              "value": "star_rating_five",
+              "count": 0,
+              "custom_attributes": null
+            }
+          ]
+        },
+        {
+          "name": "Product Rating Counter - four",
+          "attribute_code": "star_rating_four",
+          "position": 400,
+          "items": [
+            {
+              "label": "star_rating_four",
+              "value": "star_rating_four",
+              "count": 0,
+              "custom_attributes": null
+            }
+          ]
+        },
+        {
+          "name": "Product Rating Counter - one",
+          "attribute_code": "star_rating_one",
+          "position": 400,
+          "items": [
+            {
+              "label": "star_rating_one",
+              "value": "star_rating_one",
+              "count": 0,
+              "custom_attributes": null
+            }
+          ]
+        },
+        {
+          "name": "Product Rating Counter - three",
+          "attribute_code": "star_rating_three",
+          "position": 400,
+          "items": [
+            {
+              "label": "star_rating_three",
+              "value": "star_rating_three",
+              "count": 0,
+              "custom_attributes": null
+            }
+          ]
+        },
+        {
+          "name": "Product Rating Counter - two",
+          "attribute_code": "star_rating_two",
+          "position": 400,
+          "items": [
+            {
+              "label": "star_rating_two",
+              "value": "star_rating_two",
+              "count": 0,
+              "custom_attributes": null
+            }
+          ]
+        }
+      ],
+      "products": [
+        {
+          "id": "426324",
+          "name": "ทีวี UHD LED (55\", 4K, Smart) รุ่น UA55TU8000KXXT",
+          "visibility": 4,
+          "url_key": "samsung-ทีวี-บันเทิงภายในบ้าน-tv-uhd-led-55-4k-smart-ua55tu8000kxxt-260463",
+          "sku": "260463",
+          "status": 1,
+          "breadcrumbs": [
+            {
+              "category_id": "125470",
+              "level": 1,
+              "name": "TV & Entertainment",
+              "url": "tv-and-entertainment"
+            },
+            {
+              "category_id": "125476",
+              "level": 2,
+              "name": "Televisions",
+              "url": "tv-and-entertainment/televisions"
+            },
+            {
+              "category_id": "125479",
+              "level": 3,
+              "name": "LED & Nano Cell & QLED",
+              "url": "tv-and-entertainment/televisions/led-tvs"
+            }
+          ],
+          "type_id": "simple",
+          "image": "/0/0/000260463-installation-1.jpg",
+          "small_image": "/0/0/000260463-installation-1.jpg",
+          "thumbnail": "/0/0/000260463_resize1.jpg",
+          "short_description": "<ul>\r\n<li>Picture system: UHD / 4K</li>\r\n<li>RESOLUTION (PIXELS): 3840 x 2160</li>\r\n<li>FEATURES: Internet TV, Smart TV, Web Browser, Digital TV.</li>\r\n<li>HDR: YES</li>\r\n<li>Port: USB 2, HDMI 3, COMPOSITE 1</li>\r\n<li>Contrast Ratio: Mega Contrast</li>\r\n<li>RESPONSE TIME (MS): 120</li>\r\n<li>Screen size (inches): 55</li>\r\n<li>Network: WIRELESS</li>\r\n</ul>",
+          "price": 19990,
+          "special_price": null,
+          "special_from_date": "2021-06-10T00:00:00",
+          "special_to_date": "2021-06-10T23:59:00",
+          "custom_attributes": {
+            "free_delivery": "0",
+            "show_badge": "0",
+            "free_installation": "1",
+            "model": "UA55TU8000KXXT",
+            "barcode": "8806090315244",
+            "click_collect": "0",
+            "shipping_methods": "storepickup_ispu,pwb_hdl",
+            "payment_methods": "e_ordering,p2c2p_ipp,fullpaymentredirect,p2c2p_123,payment_service_dolfin,payment_service_fullpayment,payment_service_installment",
+            "flash_deal_enable": "0",
+            "special_to_date": "2021-06-10 23:59:00",
+            "special_from_date": "2021-06-10 00:00:00"
+          },
+          "custom_attributes_option": {
+            "brand": "SAMSUNG"
+          },
+          "media_gallery_entries": [
+            {
+              "file": "/0/0/000260463-installation-1.jpg",
+              "id": 842532,
+              "label": "LED TV 55\" SAMSUNG UHD SMART DTV UA55TU8000KXXT - Free Installation",
+              "media_type": "image",
+              "disabled": false,
+              "extension_attributes": null
+            },
+            {
+              "file": "/w/h/whxtfwb.jpg",
+              "id": 864806,
+              "label": null,
+              "media_type": "image",
+              "disabled": false,
+              "extension_attributes": null
+            },
+            {
+              "file": "/0/y/0yt2tzt.jpg",
+              "id": 864807,
+              "label": null,
+              "media_type": "image",
+              "disabled": false,
+              "extension_attributes": null
+            },
+            {
+              "file": "/0/j/0jlnshd.jpg",
+              "id": 864808,
+              "label": null,
+              "media_type": "image",
+              "disabled": false,
+              "extension_attributes": null
+            },
+            {
+              "file": "/p/x/pxe1qqu.jpeg",
+              "id": 864809,
+              "label": null,
+              "media_type": "image",
+              "disabled": false,
+              "extension_attributes": null
+            },
+            {
+              "file": "/z/s/zskdm53.jpg",
+              "id": 864810,
+              "label": null,
+              "media_type": "image",
+              "disabled": false,
+              "extension_attributes": null
+            },
+            {
+              "file": "/x/2/x2yhgbr.jpeg",
+              "id": 864811,
+              "label": null,
+              "media_type": "image",
+              "disabled": false,
+              "extension_attributes": null
+            },
+            {
+              "file": "/0/0/000260463_resize1.jpg",
+              "id": 842534,
+              "label": "LED TV 55\" SAMSUNG UHD SMART DTV UA55TU8000KXXT ",
+              "media_type": "image",
+              "disabled": false,
+              "extension_attributes": null
+            }
+          ],
+          "extension_attributes": {
+            "stock_item": {
+              "qty": 0,
+              "is_in_stock": false,
+              "min_sale_qty": 1,
+              "max_sale_qty": 1000
+            },
+            "t1c_redeemable_points": [
+              "103992"
+            ],
+            "installment_plans": [],
+            "overall_rating": {
+              "rating": 4.88,
+              "total_vote": 50,
+              "five_star": 44,
+              "four_star": 6,
+              "three_star": 0,
+              "two_star": 0,
+              "one_star": 0,
+              "rounded_rating": 0
+            },
+            "salable": false,
+            "ispu_salable": false,
+            "category_paths": [
+              {
+                "category_id": 125470,
+                "name": "ทีวี / บันเทิง",
+                "level": 2,
+                "parent_id": 2
+              },
+              {
+                "category_id": 125476,
+                "name": "ทีวี",
+                "level": 3,
+                "parent_id": 125470
+              },
+              {
+                "category_id": 125479,
+                "name": "LED & Nano Cell & QLED",
+                "level": 4,
+                "parent_id": 125476
+              },
+              {
+                "category_id": 133410,
+                "name": "SAMSUNG",
+                "level": 5,
+                "parent_id": 133407
+              },
+              {
+                "category_id": 133589,
+                "name": "AIS TV Samsung",
+                "level": 3,
+                "parent_id": 127657
+              },
+              {
+                "category_id": 133756,
+                "name": "1 Stop Service Free  Installation",
+                "level": 3,
+                "parent_id": 127657
+              },
+              {
+                "category_id": 133913,
+                "name": "TV",
+                "level": 4,
+                "parent_id": 133912
+              },
+              {
+                "category_id": 134064,
+                "name": "Top Pick TV",
+                "level": 3,
+                "parent_id": 127657
+              },
+              {
+                "category_id": 125482,
+                "name": "ทีวี 4K",
+                "level": 4,
+                "parent_id": 125476
+              },
+              {
+                "category_id": 134496,
+                "name": "Black Set",
+                "level": 5,
+                "parent_id": 134442
+              },
+              {
+                "category_id": 134501,
+                "name": "Brand Samsung",
+                "level": 5,
+                "parent_id": 134498
+              },
+              {
+                "category_id": 134521,
+                "name": "Pack 1",
+                "level": 6,
+                "parent_id": 134496
+              },
+              {
+                "category_id": 134529,
+                "name": "Brand Samsung",
+                "level": 4,
+                "parent_id": 134359
+              },
+              {
+                "category_id": 134362,
+                "name": "TV & Entertainemnt",
+                "level": 5,
+                "parent_id": 134361
+              },
+              {
+                "category_id": 134549,
+                "name": "Samsung",
+                "level": 5,
+                "parent_id": 134533
+              },
+              {
+                "category_id": 134631,
+                "name": "Brand Samsung",
+                "level": 5,
+                "parent_id": 134625
+              },
+              {
+                "category_id": 134531,
+                "name": "Midnight Crazy",
+                "level": 4,
+                "parent_id": 134359
+              },
+              {
+                "category_id": 134663,
+                "name": "SAMSUNG UHD SMART DTV",
+                "level": 5,
+                "parent_id": 134531
+              },
+              {
+                "category_id": 134546,
+                "name": "Finale Price",
+                "level": 4,
+                "parent_id": 134359
+              },
+              {
+                "category_id": 134665,
+                "name": "SAMSUNG UHD SMART DTV",
+                "level": 5,
+                "parent_id": 134546
+              },
+              {
+                "category_id": 134623,
+                "name": "Gifting Season & Christmas Sale Hilight",
+                "level": 4,
+                "parent_id": 129866
+              },
+              {
+                "category_id": 134754,
+                "name": "Gift for Home",
+                "level": 5,
+                "parent_id": 134750
+              },
+              {
+                "category_id": 134770,
+                "name": "<฿15,000",
+                "level": 6,
+                "parent_id": 134754
+              },
+              {
+                "category_id": 134794,
+                "name": "Hello 2021 Hilight",
+                "level": 4,
+                "parent_id": 129866
+              },
+              {
+                "category_id": 134763,
+                "name": "<฿15,000",
+                "level": 6,
+                "parent_id": 134751
+              },
+              {
+                "category_id": 134751,
+                "name": "Gift for Him",
+                "level": 5,
+                "parent_id": 134750
+              },
+              {
+                "category_id": 134900,
+                "name": "Power Buy Open Year Sale hilight",
+                "level": 4,
+                "parent_id": 129866
+              },
+              {
+                "category_id": 135003,
+                "name": "SAMSUNG",
+                "level": 6,
+                "parent_id": 134992
+              },
+              {
+                "category_id": 135080,
+                "name": "Samsung TV",
+                "level": 6,
+                "parent_id": 135079
+              },
+              {
+                "category_id": 135117,
+                "name": "2 Feb 21",
+                "level": 3,
+                "parent_id": 132722
+              },
+              {
+                "category_id": 135119,
+                "name": "4 Feb 21",
+                "level": 3,
+                "parent_id": 132722
+              },
+              {
+                "category_id": 135133,
+                "name": "Hilight Chinese New Year : For him",
+                "level": 4,
+                "parent_id": 129866
+              },
+              {
+                "category_id": 135136,
+                "name": "Hilight Chinese New Year : For senior",
+                "level": 4,
+                "parent_id": 129866
+              },
+              {
+                "category_id": 135204,
+                "name": "Valentine's Day Gift for Your Love",
+                "level": 4,
+                "parent_id": 129866
+              },
+              {
+                "category_id": 135122,
+                "name": "7 Feb 21",
+                "level": 3,
+                "parent_id": 132722
+              },
+              {
+                "category_id": 133816,
+                "name": "TOOP ",
+                "level": 2,
+                "parent_id": 2
+              },
+              {
+                "category_id": 135184,
+                "name": "ROUND 3 01:00PM - 06:00PM",
+                "level": 4,
+                "parent_id": 135181
+              },
+              {
+                "category_id": 135226,
+                "name": "Valentine's Day Gift for him",
+                "level": 4,
+                "parent_id": 129866
+              },
+              {
+                "category_id": 135243,
+                "name": "Hyper Market",
+                "level": 3,
+                "parent_id": 127657
+              },
+              {
+                "category_id": 135207,
+                "name": "10 Feb 21",
+                "level": 3,
+                "parent_id": 132722
+              },
+              {
+                "category_id": 135280,
+                "name": "Best deal",
+                "level": 6,
+                "parent_id": 135278
+              },
+              {
+                "category_id": 135316,
+                "name": "Tv entertainment",
+                "level": 5,
+                "parent_id": 135315
+              },
+              {
+                "category_id": 135221,
+                "name": "12 Feb 21",
+                "level": 3,
+                "parent_id": 132722
+              },
+              {
+                "category_id": 135195,
+                "name": "ROUND 3 01:00PM - 06:00PM",
+                "level": 4,
+                "parent_id": 135192
+              },
+              {
+                "category_id": 135224,
+                "name": "15 Feb 21",
+                "level": 3,
+                "parent_id": 132722
+              },
+              {
+                "category_id": 135353,
+                "name": "Shopping Fever 2021 Hilight",
+                "level": 4,
+                "parent_id": 129866
+              },
+              {
+                "category_id": 135345,
+                "name": "17 Feb 21",
+                "level": 3,
+                "parent_id": 132722
+              },
+              {
+                "category_id": 135348,
+                "name": "19 Feb 21",
+                "level": 3,
+                "parent_id": 132722
+              },
+              {
+                "category_id": 135410,
+                "name": "TV & Audio",
+                "level": 4,
+                "parent_id": 135404
+              },
+              {
+                "category_id": 135427,
+                "name": "Brand Samsung AV ",
+                "level": 5,
+                "parent_id": 135424
+              },
+              {
+                "category_id": 135441,
+                "name": "Hilight PAY DAY",
+                "level": 5,
+                "parent_id": 135424
+              },
+              {
+                "category_id": 135442,
+                "name": "Hilight Cyber Event 3.3",
+                "level": 4,
+                "parent_id": 129866
+              },
+              {
+                "category_id": 135447,
+                "name": "Samsung",
+                "level": 6,
+                "parent_id": 135445
+              },
+              {
+                "category_id": 135457,
+                "name": "TV & ENTERTAINMENT",
+                "level": 6,
+                "parent_id": 135456
+              },
+              {
+                "category_id": 135401,
+                "name": "25 Feb 21",
+                "level": 3,
+                "parent_id": 132722
+              },
+              {
+                "category_id": 135380,
+                "name": "ROUND 3 01:00PM - 06:00PM",
+                "level": 4,
+                "parent_id": 135373
+              },
+              {
+                "category_id": 135419,
+                "name": "27 Feb 21",
+                "level": 3,
+                "parent_id": 132722
+              },
+              {
+                "category_id": 135495,
+                "name": "1 Mar 21",
+                "level": 3,
+                "parent_id": 132722
+              },
+              {
+                "category_id": 135511,
+                "name": "Brand Samsung AV",
+                "level": 5,
+                "parent_id": 135430
+              },
+              {
+                "category_id": 135512,
+                "name": "TV Special Samsung and LG",
+                "level": 4,
+                "parent_id": 135478
+              },
+              {
+                "category_id": 135502,
+                "name": "3 Mar 21",
+                "level": 3,
+                "parent_id": 132722
+              },
+              {
+                "category_id": 135510,
+                "name": "Taraka",
+                "level": 5,
+                "parent_id": 135430
+              },
+              {
+                "category_id": 135558,
+                "name": "Brand Samsung AV",
+                "level": 5,
+                "parent_id": 135557
+              },
+              {
+                "category_id": 135525,
+                "name": "6 Mar 21",
+                "level": 3,
+                "parent_id": 132722
+              },
+              {
+                "category_id": 135560,
+                "name": "8 Mar 21",
+                "level": 3,
+                "parent_id": 132722
+              },
+              {
+                "category_id": 135574,
+                "name": "10 Mar 21",
+                "level": 3,
+                "parent_id": 132722
+              },
+              {
+                "category_id": 135612,
+                "name": "Brand Samsung AV",
+                "level": 5,
+                "parent_id": 135589
+              },
+              {
+                "category_id": 135614,
+                "name": "Hilight SUMMER SALE",
+                "level": 4,
+                "parent_id": 129866
+              },
+              {
+                "category_id": 135541,
+                "name": "ROUND 3 01:00PM - 06:00PM",
+                "level": 4,
+                "parent_id": 135538
+              },
+              {
+                "category_id": 130639,
+                "name": "Deal for E-ordering",
+                "level": 2,
+                "parent_id": 2
+              },
+              {
+                "category_id": 135629,
+                "name": "13 Mar 21",
+                "level": 3,
+                "parent_id": 132722
+              },
+              {
+                "category_id": 135632,
+                "name": "16 Mar 21",
+                "level": 3,
+                "parent_id": 132722
+              },
+              {
+                "category_id": 135641,
+                "name": "ROUND 3 01:00PM - 06:00PM",
+                "level": 4,
+                "parent_id": 135634
+              },
+              {
+                "category_id": 135695,
+                "name": "Brand Samsung AV ",
+                "level": 5,
+                "parent_id": 135600
+              },
+              {
+                "category_id": 135657,
+                "name": "19 Mar 21",
+                "level": 3,
+                "parent_id": 132722
+              },
+              {
+                "category_id": 135692,
+                "name": "Hilight Summer Overheat",
+                "level": 4,
+                "parent_id": 129866
+              },
+              {
+                "category_id": 135715,
+                "name": "22 Mar 21",
+                "level": 3,
+                "parent_id": 132722
+              },
+              {
+                "category_id": 135724,
+                "name": "24 Mar 21",
+                "level": 3,
+                "parent_id": 132722
+              },
+              {
+                "category_id": 135791,
+                "name": "Hilight SUPER PAY DAY",
+                "level": 4,
+                "parent_id": 129866
+              },
+              {
+                "category_id": 135821,
+                "name": "Brand Samsung AV",
+                "level": 5,
+                "parent_id": 135718
+              },
+              {
+                "category_id": 135762,
+                "name": "ROUND 3 01:00PM - 06:00PM",
+                "level": 4,
+                "parent_id": 135759
+              },
+              {
+                "category_id": 135726,
+                "name": "26 Mar 21",
+                "level": 3,
+                "parent_id": 132722
+              },
+              {
+                "category_id": 135728,
+                "name": "28 Mar 21",
+                "level": 3,
+                "parent_id": 132722
+              },
+              {
+                "category_id": 135782,
+                "name": "ROUND 3 01:00PM - 06:00PM",
+                "level": 4,
+                "parent_id": 135779
+              },
+              {
+                "category_id": 135772,
+                "name": "ROUND 3 01:00PM - 06:00PM",
+                "level": 4,
+                "parent_id": 135769
+              },
+              {
+                "category_id": 135730,
+                "name": "30 Mar 21",
+                "level": 3,
+                "parent_id": 132722
+              },
+              {
+                "category_id": 135855,
+                "name": "Brand Samsung AV ",
+                "level": 5,
+                "parent_id": 135700
+              },
+              {
+                "category_id": 135860,
+                "name": "SAMSUNG",
+                "level": 6,
+                "parent_id": 135849
+              },
+              {
+                "category_id": 135868,
+                "name": "TV & ENTERTAINMENT",
+                "level": 6,
+                "parent_id": 135848
+              },
+              {
+                "category_id": 135882,
+                "name": "1 Apr 21",
+                "level": 3,
+                "parent_id": 132722
+              },
+              {
+                "category_id": 135850,
+                "name": "Hilight Cyber Event 4.4",
+                "level": 4,
+                "parent_id": 129866
+              },
+              {
+                "category_id": 135884,
+                "name": "3 Apr 21",
+                "level": 3,
+                "parent_id": 132722
+              },
+              {
+                "category_id": 135923,
+                "name": "Taraka",
+                "level": 5,
+                "parent_id": 135700
+              },
+              {
+                "category_id": 135948,
+                "name": "Hilight Burn Price",
+                "level": 5,
+                "parent_id": 135703
+              },
+              {
+                "category_id": 135964,
+                "name": "Brand Samsung AV",
+                "level": 5,
+                "parent_id": 135703
+              },
+              {
+                "category_id": 136013,
+                "name": "Hilight Songkran Festival",
+                "level": 4,
+                "parent_id": 129866
+              },
+              {
+                "category_id": 136021,
+                "name": "9-30 Apr 21",
+                "level": 3,
+                "parent_id": 132722
+              },
+              {
+                "category_id": 136047,
+                "name": "Samsung",
+                "level": 4,
+                "parent_id": 136028
+              },
+              {
+                "category_id": 136065,
+                "name": "ENTERTAIN @HOME   ",
+                "level": 5,
+                "parent_id": 136062
+              },
+              {
+                "category_id": 136058,
+                "name": "Tv Entertainment",
+                "level": 4,
+                "parent_id": 136026
+              },
+              {
+                "category_id": 135976,
+                "name": "ROUND 3 01:00PM - 06:00PM",
+                "level": 4,
+                "parent_id": 135972
+              },
+              {
+                "category_id": 136070,
+                "name": "Brand Samsung AV",
+                "level": 5,
+                "parent_id": 135706
+              },
+              {
+                "category_id": 135984,
+                "name": "ROUND 3 01:00PM - 06:00PM",
+                "level": 4,
+                "parent_id": 135979
+              },
+              {
+                "category_id": 135996,
+                "name": "ROUND 3 01:00PM - 06:00PM",
+                "level": 4,
+                "parent_id": 135993
+              },
+              {
+                "category_id": 136095,
+                "name": "Hilight Hottest Items Sale",
+                "level": 4,
+                "parent_id": 129866
+              },
+              {
+                "category_id": 136102,
+                "name": "20 Apr 21",
+                "level": 3,
+                "parent_id": 132722
+              },
+              {
+                "category_id": 136121,
+                "name": "Brand SAMSUNG AV",
+                "level": 5,
+                "parent_id": 135709
+              },
+              {
+                "category_id": 136001,
+                "name": "ROUND 3 01:00PM - 06:00PM",
+                "level": 4,
+                "parent_id": 135998
+              },
+              {
+                "category_id": 136006,
+                "name": "ROUND 3 01:00PM - 06:00PM",
+                "level": 4,
+                "parent_id": 136003
+              },
+              {
+                "category_id": 136151,
+                "name": "Brand  Samsung AV",
+                "level": 5,
+                "parent_id": 135712
+              },
+              {
+                "category_id": 136111,
+                "name": "Hilight Pay Day Apr 21",
+                "level": 4,
+                "parent_id": 129866
+              },
+              {
+                "category_id": 136117,
+                "name": "27 Apr 21",
+                "level": 3,
+                "parent_id": 132722
+              },
+              {
+                "category_id": 136182,
+                "name": "TV and Entertatiment",
+                "level": 6,
+                "parent_id": 136209
+              },
+              {
+                "category_id": 136214,
+                "name": "TV",
+                "level": 4,
+                "parent_id": 136211
+              },
+              {
+                "category_id": 136226,
+                "name": "Brand SAMSUNG AV",
+                "level": 5,
+                "parent_id": 136208
+              },
+              {
+                "category_id": 136213,
+                "name": "Samsung",
+                "level": 6,
+                "parent_id": 136212
+              },
+              {
+                "category_id": 136193,
+                "name": "ROUND 3 01:00PM - 06:00PM",
+                "level": 4,
+                "parent_id": 136189
+              },
+              {
+                "category_id": 136254,
+                "name": "Hilight Lock Down Lock Price Sale",
+                "level": 4,
+                "parent_id": 129866
+              },
+              {
+                "category_id": 136279,
+                "name": "Brand SAMSUNG AV",
+                "level": 5,
+                "parent_id": 136276
+              },
+              {
+                "category_id": 136291,
+                "name": "Samsung AV Extended Warranty",
+                "level": 4,
+                "parent_id": 136196
+              },
+              {
+                "category_id": 136263,
+                "name": "Entertain at home",
+                "level": 5,
+                "parent_id": 136260
+              },
+              {
+                "category_id": 136239,
+                "name": "TV",
+                "level": 6,
+                "parent_id": 136238
+              },
+              {
+                "category_id": 136238,
+                "name": "Super Brand SAMSUNG",
+                "level": 5,
+                "parent_id": 136208
+              },
+              {
+                "category_id": 138556,
+                "name": "Samsung",
+                "level": 6,
+                "parent_id": 137508
+              },
+              {
+                "category_id": 131153,
+                "name": "Top Reviews",
+                "level": 3,
+                "parent_id": 131151
+              }
+            ],
+            "overlays": [],
+            "configurable_product_links": null,
+            "flash_sale_price": []
+          }
+        }
+      ]
+    }
+  }
+}
