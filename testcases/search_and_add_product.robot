@@ -18,7 +18,8 @@ SElect io
 *** Test Cases ***
 User check search product and add it to cart
     [Tags]    web    search TV
-     Search products with name and property    ${search_field}    ${size}
+    Search products with name and property    ${search_field}    ${size}
+    Verify number of available product    ${size}   
 
 
     
