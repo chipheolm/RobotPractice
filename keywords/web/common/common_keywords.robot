@@ -2,13 +2,13 @@
 Resource    ${CURDIR}/../locator/common_page.robot
 
 *** Variables ***
-${GLOBALTIMEOUT}     ${15}
+${GLOBALTIMEOUT}     ${30}
 
 *** Keywords ***
 Open browser to home page
-    Open browser to page    ${cds_url}          
-    Run Keyword And Ignore Error    Close pop up
-    Wait Until Page Is Completely Loaded
+    Open browser to page    ${pb_url}/${language}          
+#   Run Keyword And Ignore Error    Close pop up
+#    Wait Until Page Is Completely Loaded
 
 Open browser to page
     [Arguments]    ${url}    ${speed}=0.1 
@@ -19,19 +19,12 @@ Open browser to page
     SeleniumLibrary.Set Selenium Speed     ${speed}
     SeleniumLibrary.Go To     ${url}
 
-Log in, add product to cart and navigate to check out page
-    [Arguments]    ${email}    ${password}    ${store}    ${quantities}    ${skus}
-    ${user_token}=    Get user login token by API    ${email}    ${password}
-    Run Keyword And Ignore Error    Delete customer cart by API    ${user_token}    ${store}
-    Add multi products to cart by API    ${user_token}    ${skus}    ${quantities}    ${store}        
-    Log in and navigate to check out page with member    ${email}    ${password}
-
-Log in and navigate to check out page with member
-    [Arguments]    ${email}    ${password}
+Search desired product by name
+    [Arguments]    ${name}
     Open browser to home page
-    Go to page with url    register   
-    register_page.Login Account At Register Page    ${email}    ${password}
-    Go to page with url    checkout   
+    SeleniumLibrary.Input text    ${dictCommonPage.search_input_box}    ${name}
+    SeleniumLibrary.Click button    ${dictCommonPage.search_button}
+    Verify Web Element Is Visible     ${dictCommonPage.search_result_text}
 
 Input data and verify text for web element
     [Arguments]     ${locator}      ${expect_text}
@@ -49,7 +42,7 @@ Close pop up
     SeleniumLibrary.Click Element    xpath=//*[@id="btn-popup-close"]
 
 Wait Until Page Is Completely Loaded
-    Wait For Testability Ready
+    Sleep 5s
 
 Wait Until Page Loader Is Not Visible
     Seleniumlibrary.Wait Until Page Does Not Contain Element    ${dictCommonPage}[page_loader]    timeout=${GLOBALTIMEOUT}
@@ -65,6 +58,11 @@ Click Element
     SeleniumLibrary.Wait Until Element Is Visible     ${locator}    timeout=${timeout}
     SeleniumLibrary.Click Element  ${locator}
 
+Select Checkbox Element
+    [Arguments]    ${locator}    ${timeout}=${GLOBALTIMEOUT}
+    SeleniumLibrary.Wait Until Element Is Visible     ${locator}    timeout=${timeout}
+    SeleniumLibrary.Select checkbox  ${locator}
+
 Scroll And Click Element
     [Arguments]    ${locator}
     Scroll To Element    ${locator}
@@ -77,4 +75,18 @@ Scroll To Element
 Select from drop down by label
     [Arguments]     ${locator}     ${label}
     common_keywords.Verify Web Element Is Visible   ${locator}
-    Wait Until Keyword Succeeds    3x    5s    SeleniumLibrary.Select From List By Label   ${locator}    ${label}    
+    Wait Until Keyword Succeeds    3x    5s    SeleniumLibrary.Select From List By Label   ${locator}    ${label}  
+
+
+Scroll Down And Wait To Get Available Element
+    [Arguments]    ${locator}
+    ${section}     Set Variable     ${10}
+    ${page_height}    SeleniumLibrary.Get Element Size     ${dictCommonPage.entire_page}
+    ${page_height}    Set Variable    ${page_height}[1]
+    ${scroll_length}    Evaluate     '${page_height}/${section}'
+    FOR    ${index}  IN RANGE  ${section}
+        SeleniumLibrary.Execute Javascript     window.scrollTo(0,${${page_height}-${${scroll_length}*${index}}})
+        ${status}    Run Keyword And Return Status     SeleniumLibrary.Wait Until Element Is Visible     ${locator}     timeout=10
+        Return From Keyword If     '${status}' == '${true}'
+    END
+        Fail     This element cannot be found in this page.

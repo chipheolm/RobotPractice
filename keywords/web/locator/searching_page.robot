@@ -1,8 +1,8 @@
 *** Variables ***
 &{dictSearchingPage}
-...    opt_pay_at_store=id=inf-addPaymentMethodTabHeader-payatstore
-...    opt_bank_transfer=css=span[data-testid='inf-viewPaymentMethodTabHeaderOnTitle-payment_service_bank_transfer']
-...    lb_bank_name=css=[name='agentsName']
-...    lb_payment_channel=css=[data-testid='sel-addPaymentMethodBankTransferOnAgentsChannel']
-...    txt_phone=css=input[name='telephone']
-...    btn_continue_payment=xpath=//*[@data-testid='continue-button']
+...    screen_size_group=css=div[title="Screen Size Group (inches)"] * div[class='Checkbox-dODbyV kzpWEi']
+...    screen_size_opt=css=div[title='{titile_name}']
+...    lbl_size_option=//div[contains(@class,'Padding') and text() = '{size_inch} ${lang_unit}' ]
+...    opt_size_option=//div[contains(@class,'Padding') and text() = '{size_inch} ${lang_unit}' ]//parent::div[contains(@class,'Col__Column')]//parent::div[contains(@class,'Row__Wrapper')]/div[1]/div[contains(@class,'Checkbox')]
+...    opt_number_product=//div[contains(@class,'Padding') and text() = '{size_inch} ${lang_unit}' ]/div/span
+

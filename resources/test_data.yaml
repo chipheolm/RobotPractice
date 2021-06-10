@@ -1,3 +1,12 @@
 user:
   email: 'abc@gmail.com'
   password: '123456'
+tv_data_Serach:
+  44_55inchs: '44%20-%2055%20inches'
+  32_43inchs: '32%20-%2043%20inches'
+category_search:
+  tv: 'TV'
+filter_tag:
+  en:
+payment:
+  size: inches   
