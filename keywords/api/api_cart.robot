@@ -3,10 +3,7 @@ Resource    ${CURDIR}/../../resources/imports_resources.robot
 Variables    ${CURDIR}/../../resources/language/values_${language}.yaml
 
 *** Variables ***
-${sku_query1}    $..products[*][?(@.custom_attributes[?(@.shipping_methods=='{shipping_type}')])].sku
-${sku_query2}    $..products[*].custom_attributes.shipping_methods
-${sku_query3}    $..products[*].sku
-# ${sku_query}    $..products[*][?(@.custom_attributes[?(@.shipping_methods contains "{shipping_type}")])].sku
+${sku_query}    $..products[*].sku
 
 *** Keywords ***
 
@@ -45,7 +42,7 @@ Get sku of product can add to cart
     [Arguments]    ${product_type}    ${inchs_size}
     ${inchs_size_symbol}    Get inch size symbol for api    ${inchs_size}
     ${response_body}    Post search profuct with filer    ${product_type}    ${inchs_size_symbol}
-    ${json_path}    String.Format String    ${sku_query3}    shipping_type=${shipping_method.standard}
+    ${json_path}    String.Format String    ${sku_query}    shipping_type=${shipping_method.standard}
     ${data}   JSONLibrary.Get Value From Json    ${response_body}    ${json_path}
     ${value}    Collections.Get From List    ${data}    1
     [Return]    ${value}
