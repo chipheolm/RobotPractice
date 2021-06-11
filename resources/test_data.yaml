@@ -6,7 +6,7 @@ tv_data_Search:
   32_43_inchs: '32%20-%2043%20inches'
 category_search:
   tv: 'TV'
-filter_tag:
-  en:
-payment:
-  size: inches   
+shipping_method:
+  standard: 'pwb_hdl'
+  1hr_pick_up:   
+

@@ -27,9 +27,8 @@ Open browser to page
 
 Search desired product by name
     [Arguments]    ${name}
-    Open browser to home page
     SeleniumLibrary.Input text    ${dictCommonPage.search_input_box}    ${name}
-    SeleniumLibrary.Click button    ${dictCommonPage.search_button}
+    common_keywords.Click Element    ${dictCommonPage.search_button}
     ${expected_text}    String.Format String    ${result_text}    text=${name}
     ${result}    Get text and compare value     ${dictCommonPage.search_result_text}     ${expected_text}
     BuiltIn.Run Keyword If
@@ -46,6 +45,13 @@ Get text and compare value
     ...    '${text}' == '${text_value}'    ${true}
 
 
+Get text and search value
+    [Arguments]    ${locator}    ${text_value}
+    ${text}    Get Text Element    ${locator}
+    ${status}    BuiltIn.Run Keyword And Return Status
+    ...    BuiltIn.Should Contain    ${text}    ${text_value}
+    BuiltIn.Return From Keyword     ${status}
+
 Input data and verify text for web element
     [Arguments]     ${locator}      ${expect_text}
     SeleniumLibrary.Input Text     ${locator}    ${expect_text}
@@ -58,6 +64,10 @@ Go to page with url
     SeleniumLibrary.Go To    ${cds_url}/${language}/${path}
     Wait Until Page Is Completely Loaded
 
+Get total result 
+    [Arguments]    ${rs1}    ${rs2}
+    Run Keyword If     ${rs1}==${true} and ${rs2}==${true}   BuiltIn.Log    Pass. Test case finish with no issue.
+    ...    ELSE    BuiltIn.Fail    Fail. Some product not available on shopping cart!
 
 Close pop up 
     SeleniumLibrary.Wait Until Page Contains Element    xpath=//*[@id="btn-popup-close"]
