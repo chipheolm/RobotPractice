@@ -2,9 +2,6 @@
 Resource    ${CURDIR}/../web_resources_import.robot
 Resource    ${CURDIR}/../locator/detailed_product_page.robot
 
-*** Variables ***
-
-
 ***Keyword***
 Check product name and add to cart 
     [Arguments]    ${product_name}

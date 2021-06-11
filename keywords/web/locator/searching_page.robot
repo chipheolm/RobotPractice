@@ -7,4 +7,3 @@
 ...    opt_number_product=//div[contains(@class,'Padding') and text() = '{size_inch} ${lang_unit}' ]/div/span
 ...    target_product=css=div[data-productid='{sku}']
 ...    target_product_name=css=div[data-productid='{sku}'] a:last-child span
-

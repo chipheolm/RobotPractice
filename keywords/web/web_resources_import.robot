@@ -6,7 +6,6 @@ Resource    ${CURDIR}/page/detailed_product_page.robot
 Resource    ${CURDIR}/common/common_keywords.robot
 Resource    ${CURDIR}/../api/api_cart.robot
 
-Variables   ${CURDIR}/../../resources/language/values_${language}.yaml
 *** Keywords ***
 Global init
     Set Global Variable    ${language}    ${language.lower()}

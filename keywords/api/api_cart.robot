@@ -1,12 +1,10 @@
 *** Settings ***
 Resource    ${CURDIR}/../../resources/imports_resources.robot
-Variables    ${CURDIR}/../../resources/language/values_${language}.yaml
 
 *** Variables ***
 ${sku_query}    $..products[*].sku
 
 *** Keywords ***
-
 Post search profuct with filer
     [Documentation]    This method write to search currently for TV with inchs size option.
     [Arguments]    ${product_type}    ${inchs_size_symbol}
@@ -28,14 +26,12 @@ Post search profuct with filer
     ${quote_id}=    REST.Output    response body
     [Return]    ${quote_id}
 
-
 Get inch size symbol for api
     [Arguments]    ${inchs_size}
     ${value}    BuiltIn.Run Keyword If     '${inchs_size}'=='44 - 55'    
     ...    BuiltIn.Set Variable    ${screen_size.s_44_55_inchs}
     ...    ELSE    BuiltIn.Set Variable     ${screen_size.s_32_43_inchs}
     [Return]    ${value}
-
 
 Get sku of product can add to cart
     [Documentation]    This method will return products which only have add to cart method.
@@ -46,7 +42,3 @@ Get sku of product can add to cart
     ${data}   JSONLibrary.Get Value From Json    ${response_body}    ${json_path}
     ${value}    Collections.Get From List    ${data}    1
     [Return]    ${value}
-    
-
-        
-

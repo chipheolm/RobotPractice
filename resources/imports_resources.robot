@@ -9,3 +9,4 @@ Library      SeleniumLibrary
 
 Variables    env.yaml
 Variables    test_data.yaml
+Variables    ${CURDIR}/language/values_${language}.yaml

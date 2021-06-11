@@ -1,6 +1,6 @@
 *** Setting ***
 Resource    ${CURDIR}/../keywords/web/web_resources_import.robot 
-# Suite Teardown    Close All Browsers
+Suite Teardown    Close All Browsers
 
 *** Variables ***
 &{size}    type1=44 - 55    type2=32 - 43
@@ -17,7 +17,6 @@ Search and add product to cart if qualified
     Check product name and add to cart     ${text}
     [Return]    ${text}
 
-
 *** Test Cases ***
 Check added products are existed on shopping cart
     [Tags]    web    search TV
@@ -28,6 +27,3 @@ Check added products are existed on shopping cart
     ${result1}     Check product exist on cart    ${product_name1}
     ${result2}     Check product exist on cart    ${product_name2}
     Get total result     ${result1}    ${result2}
-
-    
-    
