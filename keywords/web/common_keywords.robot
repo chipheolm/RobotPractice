@@ -1,7 +1,13 @@
 *** Settings ***
-Resource    ${CURDIR}/../locator/common_page.robot
 
 *** Variables ***
+${entire_page}=xpath=//body
+${popup_iframe}=css=body > div.sp-fancybox-wrap.sp-fancybox-wrap-2168.sp-advanced-css-2168.adaptive-resolution.adaptive-position.adaptive-x-position-center.adaptive-y-position-middle > iframe
+${search_input_box}=css=[class='MainHeader__StyledWrapper-fBqfJn igXJea'] #txt-searchBox-input
+${search_button}=css=[class='MainHeader__StyledWrapper-fBqfJn igXJea'] #btn-searchBox-input
+${search_result_text}=css=h1[class='Text-sc-9p67zt-0 dLudwb']    
+${shopping_cart_number}=css=div [class='MiniCart__CartQty-bJioin bNCDDv'] span    
+${shopping_cart_icon}=css=div[class='MainHeader__MiniCartContainer-cOzool KbPez'] a[id=btn-openMiniCart]
 ${GLOBALTIMEOUT}     ${15}
 
 *** Keywords ***
@@ -22,10 +28,10 @@ Open browser to page
 
 Search desired product by name
     [Arguments]    ${name}
-    SeleniumLibrary.Input text    ${dictCommonPage.search_input_box}    ${name}
-    common_keywords.Click Element    ${dictCommonPage.search_button}
+    SeleniumLibrary.Input text    ${search_input_box}    ${name}
+    common_keywords.Click Element    ${search_button}
     ${expected_text}    String.Format String    ${result_text}    text=${name}
-    ${result}    Get text and compare value     ${dictCommonPage.search_result_text}     ${expected_text}
+    ${result}    Get text and compare value     ${search_result_text}     ${expected_text}
     BuiltIn.Run Keyword If
     ...    ${result} == ${true}
     ...    BuiltIn.Log    Success to search products by text name
@@ -63,11 +69,7 @@ Get total result
 
 Close pop up 
     SeleniumLibrary.Wait Until Page Contains Element    xpath=//*[@id="btn-popup-close"]
-    SeleniumLibrary.Click Element    xpath=//*[@id="btn-popup-close"]
-
-Wait Until Page Loader Is Not Visible
-    Seleniumlibrary.Wait Until Page Does Not Contain Element    ${dictCommonPage}[page_loader]    timeout=${GLOBALTIMEOUT}
-    Wait Until Page Is Completely Loaded        
+    SeleniumLibrary.Click Element    xpath=//*[@id="btn-popup-close"] 
 
 Verify Web Element Is Visible
     [Arguments]     ${locator}
@@ -107,7 +109,7 @@ Select from drop down by label
 Scroll Down And Wait To Get Available Element
     [Arguments]    ${locator}
     ${section}     Set Variable     ${11}
-    ${page_height}    SeleniumLibrary.Get Element Size     ${dictCommonPage.entire_page}
+    ${page_height}    SeleniumLibrary.Get Element Size     ${entire_page}
     ${page_height}    Set Variable    ${page_height}[1]
     ${scroll_length}    Evaluate     '${page_height}/${section}'
     FOR    ${index}  IN RANGE  ${section}
@@ -118,6 +120,6 @@ Scroll Down And Wait To Get Available Element
         BuiltIn.Fail     msg=Not found element in this page.
 
 Check quantity and click to shopping cart
-    ${text}    Get Text Element    ${dictCommonPage.shopping_cart_number}
+    ${text}    Get Text Element    ${shopping_cart_number}
     Log     Number of product right now in shopping cart is ${text}
-    Click Element    ${dictCommonPage.shopping_cart_icon}
+    Click Element    ${shopping_cart_icon}

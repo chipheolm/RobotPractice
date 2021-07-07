@@ -2,6 +2,15 @@
 Resource    ${CURDIR}/../web_resources_import.robot
 Resource    ${CURDIR}/../locator/searching_page.robot
 
+*** Variables ***
+${screen_size_group}=css=div[title="Screen Size Group (inches)"] * div[class='Checkbox-dODbyV kzpWEi']
+${screen_size_opt}=css=div[title='{titile_name}']
+${lbl_size_option}=//div[contains(@class,'Padding') and text() = '{size_inch} ${lang_unit}' ]
+${opt_size_option}=//div[contains(@class,'Padding') and text() = '{size_inch} ${lang_unit}' ]//parent::div[contains(@class,'Col__Column')]//parent::div[contains(@class,'Row__Wrapper')]/div[1]/div[contains(@class,'Checkbox')]
+${opt_number_product}=//div[contains(@class,'Padding') and text() = '{size_inch} ${lang_unit}' ]/div/span
+${target_product}=css=div[data-productid='{sku}']
+${target_product_name}=css=div[data-productid='{sku}'] a:last-child span
+
 ***Keyword***
 Search products with name and specificcation
     [Arguments]    ${name}    ${specificcation}
@@ -11,8 +20,8 @@ Search products with name and specificcation
 
 Select filter follow option
     [Arguments]    ${size}
-    ${screen_size_filter}    String.Format String    ${dictSearchingPage.screen_size_opt}    titile_name=${screen_size_title}
-    ${opt_locator}    String.Format String    ${dictSearchingPage.opt_size_option}    size_inch=${size}
+    ${screen_size_filter}    String.Format String    ${screen_size_opt}    titile_name=${screen_size_title}
+    ${opt_locator}    String.Format String    ${opt_size_option}    size_inch=${size}
     common_keywords.Scroll To Element    ${screen_size_filter}
     ${result}    Verify number of available product    ${size}
     BuiltIn.Run Keyword If     
@@ -23,7 +32,7 @@ Select filter follow option
 
 Verify number of available product
     [Arguments]    ${size}
-    ${locator}    String.Format String    ${dictSearchingPage.opt_number_product}    size_inch=${size}
+    ${locator}    String.Format String    ${opt_number_product}    size_inch=${size}
     ${text_value}    common_keywords.Get Text Element    ${locator}
     ${text_value}    String.Remove String    ${text_value}    (    )
     ${number_value}    BuiltIn.Convert To Number    ${text_value}
@@ -31,8 +40,8 @@ Verify number of available product
 
 Click qualified product with SKU
     [Arguments]    ${sku}
-    ${prd_locator}    String.Format String    ${dictSearchingPage.target_product}    sku=${sku}
-    ${prd_name_locator}    String.Format String    ${dictSearchingPage.target_product_name}    sku=${sku}
+    ${prd_locator}    String.Format String    ${target_product}    sku=${sku}
+    ${prd_name_locator}    String.Format String    ${target_product_name}    sku=${sku}
     ${name}    common_keywords.Get Text Element    ${prd_name_locator}
     common_keywords.Scroll Down And Wait To Get Available Element    ${prd_locator}
     Sleep    2S

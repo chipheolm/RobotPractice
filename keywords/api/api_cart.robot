@@ -39,6 +39,6 @@ Get sku of product can add to cart
     ${inchs_size_symbol}    Get inch size symbol for api    ${inchs_size}
     ${response_body}    Post search profuct with filer    ${product_type}    ${inchs_size_symbol}
     ${json_path}    String.Format String    ${sku_query}    shipping_type=${shipping_method.standard}
-    ${data}   JSONLibrary.Get Value From Json    ${response_body}    ${json_path}
+    ${data}   JSONLibrary.Get Value From Json    ${response_body}    $..products[*][?(@.extension_attributes.salable==true)].sku
     ${value}    Collections.Get From List    ${data}    1
     [Return]    ${value}
