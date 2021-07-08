@@ -13,7 +13,7 @@ ${expected_product}    xpath://div[@class="ProductGridItem__Label-iQRkAY jLwkyu"
 ${example_locator}    xpath://div[@class="ProductGridItem__Label-iQRkAY jLwkyu"]/parent::div/parent::div/parent::div
 
 ***Keyword***
-Search products with name and specificcation
+Search products by name and specificcation
     [Arguments]    ${name}    ${specificcation}
     common_keywords.Search desired product by name    ${name}
     Select filter follow option    ${specificcation}
@@ -25,28 +25,14 @@ Select filter follow option
     ${opt_locator}    String.Format String    ${opt_size_option}    size_inch=${size}
     common_keywords.Scroll To Element    ${screen_size_filter}
     common_keywords.Click Element    ${opt_locator}
-    # ${result}    Verify number of available product    ${size}
-    # BuiltIn.Run Keyword If     
-    # ...    ${result}==${true}
-    # ...    common_keywords.Click Element    ${opt_locator}
-    # ...    ELSE    
-    # ...    BuiltIn.Fail    Products as filted not available!     
-
-Verify number of available product
-    [Arguments]    ${size}
-    ${locator}    String.Format String    ${opt_number_product}    size_inch=${size}
-    ${text_value}    common_keywords.Get Text Element    ${locator}
-    ${text_value}    String.Remove String    ${text_value}    (    )
-    ${number_value}    BuiltIn.Convert To Number    ${text_value}
-    BuiltIn.Return From Keyword If    ${number_value} > 0    ${true}
 
 Get sku from search result
+    common_keywords.Verify Web Element Is Visible    ${example_locator}
     ${list}    SeleniumLibrary.Get WebElements    ${example_locator}
     ${sku}    SeleniumLibrary.Get Element Attribute    ${list}[1]    data-productid
     [Return]    ${sku}
 
 Click qualified product with SKU
-#    [Arguments]    ${sku}
     ${sku}    Get sku from search result
     ${prd_locator}    String.Format String    ${target_product}    sku=${sku}
     ${prd_name_locator}    String.Format String    ${target_product_name}    sku=${sku}

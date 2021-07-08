@@ -7,5 +7,5 @@ Library      JSONLibrary
 Library      REST
 Library      SeleniumLibrary    
 
-Variables    env.yaml
+Variables    test_env.yaml
 Variables    test_data.yaml

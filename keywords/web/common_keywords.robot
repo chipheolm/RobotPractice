@@ -13,8 +13,6 @@ ${prod_tag}    css:[class="Row__Wrapper-v6uxgu-0 kSLyDU"] [class="ProductBadge__
 ${GLOBALTIMEOUT}     ${15}
 
 *** Keywords ***
-Open browser to home page
-    Open browser to page    ${pb_url}
 
 Open browser to page
     [Arguments]    ${url}    ${speed}=0.1 
@@ -61,7 +59,7 @@ Input data and verify text for web element
     ${real_text}=    SeleniumLibrary.Get Value    ${locator}
     Should Be Equal    '${real_text}'    '${expect_text}'
 
-Get total result 
+Compare and assert final result 
     [Arguments]    ${rs1}    ${rs2}
     Run Keyword If     ${rs1}==${true} and ${rs2}==${true}   BuiltIn.Log    Pass. Test case finish with no issue.
     ...    ELSE    BuiltIn.Fail    Fail. Some product not available on shopping cart!
@@ -115,14 +113,15 @@ Scroll Down And Wait To Get Available Element
         BuiltIn.Fail     msg=Not found element in this page.
 
 Click to shopping cart
+    Sleep    5s
     ${text}    Get Text Element    ${shopping_cart_number}
     Log     Number of product right now in shopping cart is ${text}
     Click Element    ${shopping_cart_icon}
 
 Search and add product to cart
     [Arguments]    ${search_field}    ${size}
-    Search products with name and specificcation    ${search_field}    ${size}
-    #${sku}    Get sku of product can add to cart    ${search_field}    ${size}
+    Search products by name and specificcation    ${search_field}    ${size}
+    Sleep    3s
     ${text}    Click qualified product with SKU
     Check product name and add to cart     ${text}
     [Return]    ${text}

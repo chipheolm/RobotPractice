@@ -7,7 +7,6 @@ ${expected_jsonpath}    $..products[*][?(@.extension_attributes.salable==true)].
 
 *** Keywords ***
 Post search profuct with filer
-    [Documentation]    This method write to search currently for TV with inchs size option.
     [Arguments]    ${product_type}    ${inchs_size_symbol}
     ${end_point}=   Set Variable    ${api_url}/graphql
     &{header}=    Create Dictionary
@@ -35,7 +34,6 @@ Get inch size symbol for api
     [Return]    ${value}
 
 Get sku of product can add to cart
-    [Documentation]    This method will return products which only have add to cart method.
     [Arguments]    ${product_type}    ${inchs_size}
     ${inchs_size_symbol}    Get inch size symbol for api    ${inchs_size}
     ${response_body}    Post search profuct with filer    ${product_type}    ${inchs_size_symbol}

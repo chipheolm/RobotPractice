@@ -12,4 +12,4 @@ Check product name and add to cart
     ${result}    common_keywords.Get text and compare value    ${product_name_title}    ${product_name}
     BuiltIn.Run Keyword If    ${result}==${true}
     ...    common_keywords.Click Element    ${product_add_cart_btn}
-    ...    ELSE    BuiltIn.Fail    Not same the expected product, refuse!
+    ...    ELSE    BuiltIn.Fail    Not same the expected product, refused!
