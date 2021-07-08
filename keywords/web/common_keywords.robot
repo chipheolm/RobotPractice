@@ -1,18 +1,20 @@
 *** Settings ***
+Resource    web_resources_import.robot
 
 *** Variables ***
-${entire_page}=xpath=//body
-${popup_iframe}=css=body > div.sp-fancybox-wrap.sp-fancybox-wrap-2168.sp-advanced-css-2168.adaptive-resolution.adaptive-position.adaptive-x-position-center.adaptive-y-position-middle > iframe
-${search_input_box}=css=[class='MainHeader__StyledWrapper-fBqfJn igXJea'] #txt-searchBox-input
-${search_button}=css=[class='MainHeader__StyledWrapper-fBqfJn igXJea'] #btn-searchBox-input
-${search_result_text}=css=h1[class='Text-sc-9p67zt-0 dLudwb']    
-${shopping_cart_number}=css=div [class='MiniCart__CartQty-bJioin bNCDDv'] span    
-${shopping_cart_icon}=css=div[class='MainHeader__MiniCartContainer-cOzool KbPez'] a[id=btn-openMiniCart]
+${entire_page}    xpath://body
+${popup_iframe}    css:body > div.sp-fancybox-wrap.sp-fancybox-wrap-2168.sp-advanced-css-2168.adaptive-resolution.adaptive-position.adaptive-x-position-center.adaptive-y-position-middle > iframe
+${search_input_box}    css:[class='MainHeader__StyledWrapper-fBqfJn igXJea'] #txt-searchBox-input
+${search_button}    css:[class='MainHeader__StyledWrapper-fBqfJn igXJea'] #btn-searchBox-input
+${search_result_text}    css:h1[class='Text-sc-9p67zt-0 dLudwb']    
+${shopping_cart_number}    css:div [class='MiniCart__CartQty-bJioin bNCDDv'] span    
+${shopping_cart_icon}    css:div[class='MainHeader__MiniCartContainer-cOzool KbPez'] a[id=btn-openMiniCart]
+${prod_tag}    css:[class="Row__Wrapper-v6uxgu-0 kSLyDU"] [class="ProductBadge__Relative-bxGwEa emnXMc"]
 ${GLOBALTIMEOUT}     ${15}
 
 *** Keywords ***
 Open browser to home page
-    Open browser to page    ${pb_url}/${language}
+    Open browser to page    ${pb_url}
 
 Open browser to page
     [Arguments]    ${url}    ${speed}=0.1 
@@ -30,6 +32,8 @@ Search desired product by name
     [Arguments]    ${name}
     SeleniumLibrary.Input text    ${search_input_box}    ${name}
     common_keywords.Click Element    ${search_button}
+    Sleep    4s
+    common_keywords.Verify Web Element Is Visible    ${prod_tag}
     ${expected_text}    String.Format String    ${result_text}    text=${name}
     ${result}    Get text and compare value     ${search_result_text}     ${expected_text}
     BuiltIn.Run Keyword If
@@ -57,19 +61,10 @@ Input data and verify text for web element
     ${real_text}=    SeleniumLibrary.Get Value    ${locator}
     Should Be Equal    '${real_text}'    '${expect_text}'
 
-Go to page with url
-    [Arguments]    ${path}
-    SeleniumLibrary.Go To    ${cds_url}/${language}/${path}
-    Wait Until Page Is Completely Loaded
-
 Get total result 
     [Arguments]    ${rs1}    ${rs2}
     Run Keyword If     ${rs1}==${true} and ${rs2}==${true}   BuiltIn.Log    Pass. Test case finish with no issue.
     ...    ELSE    BuiltIn.Fail    Fail. Some product not available on shopping cart!
-
-Close pop up 
-    SeleniumLibrary.Wait Until Page Contains Element    xpath=//*[@id="btn-popup-close"]
-    SeleniumLibrary.Click Element    xpath=//*[@id="btn-popup-close"] 
 
 Verify Web Element Is Visible
     [Arguments]     ${locator}
@@ -119,7 +114,15 @@ Scroll Down And Wait To Get Available Element
     END
         BuiltIn.Fail     msg=Not found element in this page.
 
-Check quantity and click to shopping cart
+Click to shopping cart
     ${text}    Get Text Element    ${shopping_cart_number}
     Log     Number of product right now in shopping cart is ${text}
     Click Element    ${shopping_cart_icon}
+
+Search and add product to cart
+    [Arguments]    ${search_field}    ${size}
+    Search products with name and specificcation    ${search_field}    ${size}
+    #${sku}    Get sku of product can add to cart    ${search_field}    ${size}
+    ${text}    Click qualified product with SKU
+    Check product name and add to cart     ${text}
+    [Return]    ${text}

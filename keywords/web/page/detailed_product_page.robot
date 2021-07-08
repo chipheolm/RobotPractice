@@ -1,11 +1,10 @@
 *** Setting ***
 Resource    ${CURDIR}/../web_resources_import.robot
-Resource    ${CURDIR}/../locator/detailed_product_page.robot
 
 *** Variables ***
-${product_name_title}=css=#link-brandName-productDetail+span
-${product_add_cart_btn}=css=div[class='ProductSummary__StickyBarView-ccTufv bHNIjO'] * button
-${product_pick_up_btn}=css=div[class='Col__Column-sc-1619uro-0 cPDxnm'] * button
+${product_name_title}    css:#link-brandName-productDetail+span
+${product_add_cart_btn}    css:div[class='ProductSummary__StickyBarView-ccTufv bHNIjO'] * button
+${product_pick_up_btn}    css:div[class='Col__Column-sc-1619uro-0 cPDxnm'] * button
 
 ***Keyword***
 Check product name and add to cart 

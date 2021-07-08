@@ -1,8 +1,9 @@
 *** Settings ***
-Resource    ${CURDIR}/../../resources/imports_resources.robot
+Resource    ${CURDIR}/../../testdata/imports_resources.robot
 
 *** Variables ***
 ${sku_query}    $..products[*].sku
+${expected_jsonpath}    $..products[*][?(@.extension_attributes.salable==true)].sku
 
 *** Keywords ***
 Post search profuct with filer
@@ -17,7 +18,7 @@ Post search profuct with filer
     ...    client=web
     ...    store=${store}
     ...    x-product-attr=free_delivery,free_text_flag,badge,show_badge,free_installation,product_tags,related_to,home_branch,attached_pdf_file,model,barcode,click_collect,shipping_methods,payment_methods,flash_deal_enable,special_to_date,special_from_date
-    ${body_request}=    JSONLibrary.Load JSON From File     ${CURDIR}/payload/search_payload.json
+    ${body_request}=    JSONLibrary.Load JSON From File     ${CURDIR}/search_payload.json
     ${body_request}=    JSONLibrary.Update Value To Json    ${body_request}    $..filterGroups[4].filters[0].value    ${inchs_size_symbol}
     ${body_request}=    JSONLibrary.Update Value To Json    ${body_request}    $..filterGroups[5].filters[0].value    ${product_type}
     ${body}=    Evaluate    json.dumps($body_request)    json
@@ -39,6 +40,6 @@ Get sku of product can add to cart
     ${inchs_size_symbol}    Get inch size symbol for api    ${inchs_size}
     ${response_body}    Post search profuct with filer    ${product_type}    ${inchs_size_symbol}
     ${json_path}    String.Format String    ${sku_query}    shipping_type=${shipping_method.standard}
-    ${data}   JSONLibrary.Get Value From Json    ${response_body}    $..products[*][?(@.extension_attributes.salable==true)].sku
+    ${data}   JSONLibrary.Get Value From Json    ${response_body}     ${sku_query}
     ${value}    Collections.Get From List    ${data}    1
     [Return]    ${value}
