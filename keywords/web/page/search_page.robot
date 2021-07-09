@@ -17,7 +17,7 @@ Search products by name and specificcation
     [Arguments]    ${name}    ${specificcation}
     common_keywords.Search desired product by name    ${name}
     Select filter follow option    ${specificcation}
-    BuiltIn.Sleep     2S
+    BuiltIn.Sleep     5S
 
 Select filter follow option
     [Arguments]    ${size}
@@ -32,7 +32,7 @@ Get sku from search result
     ${sku}    SeleniumLibrary.Get Element Attribute    ${list}[1]    data-productid
     [Return]    ${sku}
 
-Click qualified product with SKU
+Click particular product with SKU
     ${sku}    Get sku from search result
     ${prd_locator}    String.Format String    ${target_product}    sku=${sku}
     ${prd_name_locator}    String.Format String    ${target_product_name}    sku=${sku}

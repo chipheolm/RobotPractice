@@ -10,6 +10,9 @@ ${search_result_text}    css:h1[class='Text-sc-9p67zt-0 dLudwb']
 ${shopping_cart_number}    css:div [class='MiniCart__CartQty-bJioin bNCDDv'] span    
 ${shopping_cart_icon}    css:div[class='MainHeader__MiniCartContainer-cOzool KbPez'] a[id=btn-openMiniCart]
 ${prod_tag}    css:[class="Row__Wrapper-v6uxgu-0 kSLyDU"] [class="ProductBadge__Relative-bxGwEa emnXMc"]
+${iframe_target}    css:div[classname="sp-fancybox-wrap sp-fancybox-wrap-2405 sp-advanced-css-2405"] iframe[classname="sp-fancybox-iframe sp-fancybox-skin sp-fancybox-iframe-2405"]
+${close_popup_btn}    css:#wrap-close-button-1454703945249
+
 ${GLOBALTIMEOUT}     ${15}
 
 *** Keywords ***
@@ -25,6 +28,17 @@ Open browser to page
     SeleniumLibrary.Maximize Browser Window
     SeleniumLibrary.Set Selenium Speed     ${speed}
     SeleniumLibrary.Go To     ${url}
+Close popup
+    BuiltIn.Run Keyword And Ignore Error     Switch iframe and click
+
+Switch iframe and click
+    Verify Web Element Is Visible    ${iframe_target}
+    Sleep    5s
+    BuiltIn.Run Keyword And Ignore Error     SeleniumLibrary.Select frame     ${iframe_target}
+    BuiltIn.Run Keyword And Ignore Error     SeleniumLibrary.Select frame     ${iframe_target}
+    BuiltIn.Run Keyword And Ignore Error     Click Element    ${close_popup_btn}  
+    BuiltIn.Run Keyword And Ignore Error     SeleniumLibrary.Click Element At Coordinates    ${entire_page}    300    300
+
 
 Search desired product by name
     [Arguments]    ${name}
@@ -120,8 +134,9 @@ Click to shopping cart
 
 Search and add product to cart
     [Arguments]    ${search_field}    ${size}
-    Search products by name and specificcation    ${search_field}    ${size}
-    Sleep    3s
-    ${text}    Click qualified product with SKU
-    Check product name and add to cart     ${text}
+    search_page.Search products by name and specificcation    ${search_field}    ${size}
+    ${text}    search_page.Click particular product with SKU
+    
+    Close popup
+    prod_detail_page.Check product name and add to cart     ${text}
     [Return]    ${text}

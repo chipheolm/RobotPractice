@@ -4,4 +4,4 @@ Resource    ${CURDIR}/page/search_page.robot
 Resource    ${CURDIR}/page/cart_page.robot
 Resource    ${CURDIR}/page/prod_detail_page.robot
 Resource    ${CURDIR}/common_keywords.robot
-Resource    ${CURDIR}/../api/api_cart.robot
+Resource    ${CURDIR}/../api/product_api.robot

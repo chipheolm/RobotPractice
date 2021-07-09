@@ -14,6 +14,6 @@ Add products then checking shopping cart
     ${product_1}    common_keywords.Search and add product to cart    ${search_field}    ${type1}
     ${product_2}    common_keywords.Search and add product to cart    ${search_field}    ${type2}
     common_keywords.Click to shopping cart
-    ${result1}      cart_page.Check product is existed on cart    ${product_1}
-    ${result2}      cart_page.Check product is existed on cart    ${product_2}
-    Compare and assert final result     ${result1}    ${result2}
+    ${check_point1}      cart_page.Check product is existed on cart    ${product_1}
+    ${check_point2}      cart_page.Check product is existed on cart    ${product_2}
+    Compare and assert final result     ${check_point1}    ${check_point2}

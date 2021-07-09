@@ -6,7 +6,7 @@ ${sku_query}    $..products[*].sku
 ${expected_jsonpath}    $..products[*][?(@.extension_attributes.salable==true)].sku
 
 *** Keywords ***
-Post search profuct with filer
+Post search profuct with filter
     [Arguments]    ${product_type}    ${inchs_size_symbol}
     ${end_point}=   Set Variable    ${api_url}/graphql
     &{header}=    Create Dictionary
@@ -36,7 +36,7 @@ Get inch size symbol for api
 Get sku of product can add to cart
     [Arguments]    ${product_type}    ${inchs_size}
     ${inchs_size_symbol}    Get inch size symbol for api    ${inchs_size}
-    ${response_body}    Post search profuct with filer    ${product_type}    ${inchs_size_symbol}
+    ${response_body}    Post search profuct with filter    ${product_type}    ${inchs_size_symbol}
     ${json_path}    String.Format String    ${sku_query}    shipping_type=${shipping_method.standard}
     ${data}   JSONLibrary.Get Value From Json    ${response_body}     ${sku_query}
     ${value}    Collections.Get From List    ${data}    1
