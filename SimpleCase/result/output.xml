@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.1 (Python 3.8.10 on linux)" generated="20211221 20:52:36.435" rpa="false" schemaversion="2">
+<suite id="s1" name="RevisedHW" source="/home/chipheo/WS/RobotPractice/SimpleCase/RevisedHW.robot">
+<test id="s1-t1" name="Test case 1: Login guru99">
+<kw name="Open guru99" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://demo.guru99.com/V4/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211221 20:52:36.626" level="INFO">Opening browser 'chrome' to base url 'http://demo.guru99.com/V4/'.</msg>
+<status status="PASS" starttime="20211221 20:52:36.625" endtime="20211221 20:52:50.032"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211221 20:52:50.032" endtime="20211221 20:52:50.147"/>
+</kw>
+<status status="PASS" starttime="20211221 20:52:36.625" endtime="20211221 20:52:50.147"/>
+</kw>
+<kw name="Login guru99">
+<arg>mngr376457</arg>
+<arg>uvUsytu</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@name='uid']</arg>
+<arg>${user_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211221 20:52:50.150" level="INFO">Typing text 'mngr376457' into text field 'xpath=//input[@name='uid']'.</msg>
+<status status="PASS" starttime="20211221 20:52:50.149" endtime="20211221 20:52:50.325"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>xpath=//input[@name='password']</arg>
+<arg>${pass_word}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20211221 20:52:50.326" level="INFO">Typing password into text field 'xpath=//input[@name='password']'.</msg>
+<msg timestamp="20211221 20:52:50.389" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20211221 20:52:50.465" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20211221 20:52:50.325" endtime="20211221 20:52:50.465"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//input[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211221 20:52:50.466" level="INFO">Clicking button 'xpath=//input[@type='submit']'.</msg>
+<status status="PASS" starttime="20211221 20:52:50.465" endtime="20211221 20:52:52.401"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211221 20:52:54.403" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211221 20:52:52.402" endtime="20211221 20:52:54.404"/>
+</kw>
+<status status="PASS" starttime="20211221 20:52:50.148" endtime="20211221 20:52:54.404"/>
+</kw>
+<kw name="Add new customer form">
+<arg>ABC</arg>
+<arg>05/13/1995</arg>
+<arg>18Floor Handico</arg>
+<arg>Ha noi</arg>
+<arg>Me tri</arg>
+<arg>123456</arg>
+<arg>0976721230</arg>
+<arg>tmnjm@abc.com</arg>
+<arg>abc123123</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${add_new_customer}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211221 20:52:54.407" endtime="20211221 20:52:54.489"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${add_new_customer}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211221 20:52:54.490" level="INFO">Clicking link 'xpath://a[contains(text(),'New Customer')]'.</msg>
+<status status="PASS" starttime="20211221 20:52:54.489" endtime="20211221 20:52:54.599"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//tbody//input[@name='name']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211221 20:52:54.599" endtime="20211221 20:52:59.097"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@name='name']</arg>
+<arg>${name1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211221 20:52:59.098" level="INFO">Typing text 'ABC' into text field 'xpath=//input[@name='name']'.</msg>
+<status status="PASS" starttime="20211221 20:52:59.097" endtime="20211221 20:52:59.353"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@name='dob']</arg>
+<arg>${dob}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211221 20:52:59.355" level="INFO">Typing text '05/13/1995' into text field 'xpath=//input[@name='dob']'.</msg>
+<status status="PASS" starttime="20211221 20:52:59.354" endtime="20211221 20:52:59.510"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//textarea[@name='addr']</arg>
+<arg>${addr}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211221 20:52:59.511" level="INFO">Typing text '18Floor Handico' into text field 'xpath=//textarea[@name='addr']'.</msg>
+<status status="PASS" starttime="20211221 20:52:59.511" endtime="20211221 20:52:59.649"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@name='city']</arg>
+<arg>${city}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211221 20:52:59.650" level="INFO">Typing text 'Ha noi' into text field 'xpath=//input[@name='city']'.</msg>
+<status status="PASS" starttime="20211221 20:52:59.649" endtime="20211221 20:52:59.795"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@name='state']</arg>
+<arg>${state}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211221 20:52:59.795" level="INFO">Typing text 'Me tri' into text field 'xpath=//input[@name='state']'.</msg>
+<status status="PASS" starttime="20211221 20:52:59.795" endtime="20211221 20:52:59.938"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@name='pinno']</arg>
+<arg>${pinno}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211221 20:52:59.938" level="INFO">Typing text '123456' into text field 'xpath=//input[@name='pinno']'.</msg>
+<status status="PASS" starttime="20211221 20:52:59.938" endtime="20211221 20:53:00.081"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@name='telephoneno']</arg>
+<arg>${telephoneno}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211221 20:53:00.082" level="INFO">Typing text '0976721230' into text field 'xpath=//input[@name='telephoneno']'.</msg>
+<status status="PASS" starttime="20211221 20:53:00.081" endtime="20211221 20:53:00.236"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@name='emailid']</arg>
+<arg>${emailid}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211221 20:53:00.237" level="INFO">Typing text 'tmnjm@abc.com' into text field 'xpath=//input[@name='emailid']'.</msg>
+<status status="PASS" starttime="20211221 20:53:00.237" endtime="20211221 20:53:00.391"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>xpath=//input[@name='password']</arg>
+<arg>${password1}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20211221 20:53:00.393" level="INFO">Typing password into text field 'xpath=//input[@name='password']'.</msg>
+<msg timestamp="20211221 20:53:00.456" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20211221 20:53:00.555" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20211221 20:53:00.392" endtime="20211221 20:53:00.555"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//input[@name='sub']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211221 20:53:00.557" level="INFO">Clicking button 'xpath=//input[@name='sub']'.</msg>
+<status status="PASS" starttime="20211221 20:53:00.556" endtime="20211221 20:53:02.162"/>
+</kw>
+<status status="PASS" starttime="20211221 20:52:54.405" endtime="20211221 20:53:02.162"/>
+</kw>
+<kw name="Verify result message">
+<kw name="Set Variable" library="BuiltIn">
+<var>${expected_text}</var>
+<arg>Customer Registered Successfully!!!</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20211221 20:53:02.164" level="INFO">${expected_text} = Customer Registered Successfully!!!</msg>
+<status status="PASS" starttime="20211221 20:53:02.163" endtime="20211221 20:53:02.164"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${actual_message}</var>
+<arg>xpath=//table/tbody//td/p</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20211221 20:53:02.204" level="INFO">${actual_message} = Customer Registered Successfully!!!</msg>
+<status status="PASS" starttime="20211221 20:53:02.164" endtime="20211221 20:53:02.204"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${actual_message}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20211221 20:53:02.205" level="INFO">Customer Registered Successfully!!!</msg>
+<status status="PASS" starttime="20211221 20:53:02.204" endtime="20211221 20:53:02.205"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${actual_message}</arg>
+<arg>${expected_text}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20211221 20:53:02.205" endtime="20211221 20:53:02.206"/>
+</kw>
+<status status="PASS" starttime="20211221 20:53:02.163" endtime="20211221 20:53:02.206"/>
+</kw>
+<kw name="Delete customer" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211221 20:53:05.208" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211221 20:53:02.207" endtime="20211221 20:53:05.208"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${customer_id_path}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211221 20:53:05.208" endtime="20211221 20:53:05.253"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${customer_id}</var>
+<arg>${customer_id_path}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20211221 20:53:05.279" level="INFO">${customer_id} = 68945</msg>
+<status status="PASS" starttime="20211221 20:53:05.253" endtime="20211221 20:53:05.280"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Delete Customer</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211221 20:53:05.280" level="INFO">Clicking link 'Delete Customer'.</msg>
+<status status="PASS" starttime="20211221 20:53:05.280" endtime="20211221 20:53:06.416"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@name='cusid']</arg>
+<arg>${customer_id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211221 20:53:06.417" level="INFO">Typing text '68945' into text field 'xpath=//input[@name='cusid']'.</msg>
+<status status="PASS" starttime="20211221 20:53:06.416" endtime="20211221 20:53:06.624"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211221 20:53:06.626" level="INFO">Clicking element 'xpath=//input[@type='submit']'.</msg>
+<status status="PASS" starttime="20211221 20:53:06.625" endtime="20211221 20:53:06.748"/>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<arg>ACCEPT</arg>
+<arg>30s</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<msg timestamp="20211221 20:53:06.749" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:30</msg>
+<status status="PASS" starttime="20211221 20:53:06.748" endtime="20211221 20:53:06.790"/>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<var>${message}</var>
+<arg>ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<msg timestamp="20211221 20:53:06.790" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg timestamp="20211221 20:53:07.170" level="INFO">${message} = Customer does not Exist!!!</msg>
+<status status="PASS" starttime="20211221 20:53:06.790" endtime="20211221 20:53:07.170"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${expected_text}</var>
+<arg>Customer deleted Successfully</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20211221 20:53:07.171" level="INFO">${expected_text} = Customer deleted Successfully</msg>
+<status status="PASS" starttime="20211221 20:53:07.170" endtime="20211221 20:53:07.171"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${message}</arg>
+<arg>${expected_text}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20211221 20:53:07.172" level="FAIL">Customer does not Exist!!! != Customer deleted Successfully</msg>
+<status status="FAIL" starttime="20211221 20:53:07.171" endtime="20211221 20:53:07.172"/>
+</kw>
+<status status="FAIL" starttime="20211221 20:53:02.207" endtime="20211221 20:53:07.173">Customer does not Exist!!! != Customer deleted Successfully</status>
+</kw>
+<status status="FAIL" starttime="20211221 20:52:36.623" endtime="20211221 20:53:07.173">Teardown failed:
+Customer does not Exist!!! != Customer deleted Successfully</status>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211221 20:53:07.175" endtime="20211221 20:53:07.299"/>
+</kw>
+<status status="FAIL" starttime="20211221 20:52:36.436" endtime="20211221 20:53:07.299"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="RevisedHW">RevisedHW</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
